@@ -1,12 +1,13 @@
 @charset "UTF-8";
-/* Tablesort specific styling ---------- /
-/ http://tristen.ca/tablesort/demo/  -- */
+/* Styling for sortable table headers */
+/* Based on http://tristen.ca/tablesort/demo/ */
+
 th.sort-header {
-  cursor:pointer;
+  cursor:pointer;  /* Show pointer cursor on sortable headers */
   }
 th.sort-header::-moz-selection,
 th.sort-header::selection {
-  background:transparent;
+  background:transparent;  /* Prevent text selection highlight */
   }
 table th.sort-header:after {
   content:'';
@@ -15,22 +16,22 @@ table th.sort-header:after {
   border-width:0 4px 4px;
   border-style:solid;
   border-color:#333 transparent;
-  opacity: 0.4;
-  visibility:hidden;
+  opacity: 0.4;  /* Default arrow is semi-transparent */
+  visibility:hidden;  /* Hide arrow by default */
   }
 table th sort-header:hover {
-    background-color: #eee;
+    background-color: #eee;  /* Highlight on hover */
 }
 table th.sort-header:hover:after {
-  visibility:visible;
+  visibility:visible;  /* Show arrow on hover */
   }
 table th.sort-up:after,
 table th.sort-down:after,
 table th.sort-down:hover:after {
   visibility:visible;
-  opacity:1;
+  opacity:1;  /* Full opacity for active sort */
   }
 table th.sort-up:after {
   border-bottom:none;
-  border-width:4px 4px 0;
+  border-width:4px 4px 0;  /* Flip arrow direction for ascending sort */
   }
