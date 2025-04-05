@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NHL 2025 Atlantic Division Standings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Base stylesheet for table formatting -->
+    <link href="tables.css" rel="stylesheet">
+
+    <!-- External table sorting library -->
+    <script src="tablesort.min.js"></script>
+
+    <!-- Additional styles for sortable tables -->
+    <link href="tablesort.css" rel="stylesheet">
+    <!-- Custom JS - using defer to wait for page load -->
+    <script src="tables.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>NHL 2025 Atlantic Division Standings</h1>
+    </header>
+    <main>
+        <!-- TODO: Add filter options for viewing by wins/losses? -->
+        <table>
+            <caption>Atlantic Division Standings as of April 4, 2025</caption>
+            <colgroup>
+                <!-- Giving team column different styling than numeric data -->
+                <col class="team">
+                <col class="stats">
+                <col class="stats">
+                <col class="stats">
+            </colgroup>
+            <thead>
+                <tr> 
+                    <th scope="col">Team</th>
+                    <th scope="col">Wins</th>
+                    <th scope="col">Losses</th>
+                    <th scope="col">Overtime Losses</th>
+                </tr>
+            </thead>
+            <!-- Need to update these stats weekly! -->
+            <tbody>
+                <tr>
+                    <th scope="row">Toronto Maple Leafs</th>
+                    <td>46</td>
+                    <td>25</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tampa Bay Lightning</th>
+                    <td>44</td>
+                    <td>26</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Florida Panthers</th>
+                    <td>44</td>
+                    <td>27</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ottawa Senators</th>
+                    <td>40</td>
+                    <td>29</td>
+                    <td>0</td>
+                </tr>
+                <!-- Middle of the pack teams -->
+                <tr>
+                    <th scope="row">Montreal Canadiens</th>
+                    <td>36</td>
+                    <td>30</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Detroit Red Wings</th>
+                    <td>34</td>
+                    <td>33</td>
+                    <td>0</td>
+                </tr>
+                <!-- Bottom teams - might need to add playoff elimination status soon -->
+                <tr>
+                    <th scope="row">Buffalo Sabres</th>
+                    <td>32</td>
+                    <td>36</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Boston Bruins</th>
+                    <td>30</td>
+                    <td>37</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <small>Data sourced from NHL official standings as of April 4, 2025.</small>
+    </footer>
+    <!-- Maybe add links to team pages later? -->
+</body>
+
+</html>
