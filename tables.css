@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* Basic typography settings - keeping it readable with a sans-serif stack */
+html {
+    font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/* Main table structure */
+table {
+    border-collapse: collapse;  /* cleaner borders without doubling up */
+    caption-side: top;          /* caption above table looks better for this data */
+    table-layout: auto;         /* let the browser figure out column widths */
+    width: 80%;                 /* don't stretch full width - gives some breathing room */
+    empty-cells: hide;          /* no boxes for empty cells */
+}
+
+/* Subtle color coding for columns - using RGBA for transparency */
+colgroup + colgroup col:nth-child(1) {
+    background-color: rgba(100, 0, 0, 0.25);  /* light red for first column */
+}
+colgroup + colgroup col:nth-child(2) {
+    background-color: rgba(0, 100, 0, 0.25);  /* light green for second column */
+}
+colgroup + colgroup col:nth-child(3) {
+    background-color: rgba(0, 0, 100, 0.25);  /* light blue for third column */
+}
+
+/* Cell formatting - consistent padding and borders */
+td, th {
+    padding: 0.5em;
+    border: 1px solid #666;
+}
+
+/* Header styling - light gray background for all headers */
+th {
+    background: rgba(225, 225, 225, 1);
+}
+
+/* Left-align team names in the first column */
+tbody th {
+    text-align: left;
+}
+
+thead tr:first-child th:first-child {
+    /* Hide top left cell - it's empty */
+    /* Not sure if I want to completely hide this or just style differently... */
+}
+
+/* STEP 10a: Zebra striping for rows */
+/* Need to come back and implement this - maybe use nth-child(odd/even)? */
+
+/* Footer styling - smaller text for notes */
+tfoot td {
+    font-size: 60%;
+}
+
+/* Make the caption stand out more with larger text */
+caption {
+    font-size: 150%;
+}
+
